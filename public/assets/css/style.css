@@ -1,0 +1,651 @@
+/* ============================================================ */
+/* ===== BASE STYLES ===== */
+/* ============================================================ */
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+/* ============================================================ */
+/* ===== THEME STYLES - DARK ONLY ===== */
+/* ============================================================ */
+.theme-dark {
+    background-color: #0a0a0a;
+    color: #ffffff;
+}
+
+.theme-dark .glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .glass-dark {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.theme-dark .text-primary {
+    color: #ffffff;
+}
+
+.theme-dark .text-secondary {
+    color: #94a3b8;
+}
+
+
+
+/* ============================================================ */
+/* ===== SECTION BACKGROUND IMAGES ===== */
+/* ============================================================ */
+.experience-bg,
+.hero-bg ,
+.footer-bg,
+.skills-bg,
+.contact-bg,
+.projects-bg,
+.education-bg,
+.feedback-bg,
+.about-bg{
+   background: #0a0a12;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero-bg 
+ {
+    background-image: url('/assets/images/hero1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+
+
+
+/* ============================================================ */
+/* ===== OVERLAYS - DARK MODE ===== */
+/* ============================================================ */
+.hero-bg::before,
+.about-bg::before,
+.skills-bg::before,
+.projects-bg::before,
+.experience-bg::before,
+.education-bg::before,
+.contact-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 0;
+}
+
+/* Content above overlay */
+.hero-bg .container,
+.about-bg .container,
+.skills-bg .container,
+.projects-bg .container,
+.experience-bg .container,
+.education-bg .container,
+.contact-bg .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================================ */
+/* ===== HERO CARD HOVER EFFECTS ===== */
+/* ============================================================ */
+.hero-card-hover {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-card-hover:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 20px 60px rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* ============================================================ */
+/* ===== FORM INPUTS - DARK MODE ===== */
+/* ============================================================ */
+input,
+textarea,
+select {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease !important;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+    border-color: rgba(59, 130, 246, 0.4) !important;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.05) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.05), 0 0 30px rgba(59, 130, 246, 0.03) !important;
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #64748b !important;
+}
+
+/* ============================================================ */
+/* ===== ROUNDED BADGE ===== */
+/* ============================================================ */
+.rounded-full.bg-white\/5 {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+}
+
+.rounded-full.bg-white\/5 .text-white\/70 {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.rounded-full.bg-white\/5 .text-blue-400\/50 {
+    color: rgba(59, 130, 246, 0.5) !important;
+}
+
+.rounded-full.bg-white\/5:hover {
+    background: rgba(59, 130, 246, 0.08) !important;
+    border-color: rgba(59, 130, 246, 0.2) !important;
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.08);
+}
+
+/* ============================================================ */
+/* ===== NAVBAR ===== */
+/* ============================================================ */
+nav {
+    top: 0 !important;
+    z-index: 9999 !important;
+}
+
+nav .glass-dark {
+    position: relative;
+    z-index: 9999;
+}
+
+/* ============================================================ */
+/* ===== SCROLL PROGRESS BAR ===== */
+/* ============================================================ */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #2563eb, #3b82f6, #2563eb);
+    z-index: 99999;
+    transition: width 0.1s ease;
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+}
+
+/* ============================================================ */
+/* ===== SECTION TITLES ===== */
+/* ============================================================ */
+.section-title {
+    color: #ffffff !important;
+}
+
+.bg-gradient-to-r.from-blue-300.via-white.to-blue-400 {
+    background: linear-gradient(to right, #3b82f6, #ffffff, #3b82f6) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.border-b-4.border-blue-500 {
+    border-bottom-color: #3b82f6 !important;
+}
+
+.text-blue-400 {
+    color: #3b82f6 !important;
+}
+
+/* ============================================================ */
+/* ===== ANIMATIONS ===== */
+/* ============================================================ */
+@keyframes scan {
+    0% { top: 0; }
+    100% { top: 100%; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes pulseSlow {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+@keyframes shine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes modalPopup {
+    from { opacity: 0; transform: scale(0.9) translateY(30px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* ============================================================ */
+/* ===== UTILITY CLASSES ===== */
+/* ============================================================ */
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+    animation: pulseSlow 3s ease-in-out infinite;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-modal-popup {
+    animation: modalPopup 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.blue-shine {
+    background: linear-gradient(135deg, #2563eb, #3b82f6, #2563eb);
+    background-size: 200% 200%;
+    animation: shine 3s ease-in-out infinite;
+}
+
+.clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+}
+
+/* ============================================================ */
+/* ===== CUSTOM SCROLLBAR ===== */
+/* ============================================================ */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #3b82f6, #60a5fa);
+    border-radius: 10px;
+}
+
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #3b82f6 rgba(255, 255, 255, 0.05);
+    scroll-behavior: smooth;
+}
+
+/* ============================================================ */
+/* ===== HOVER EFFECTS ===== */
+/* ============================================================ */
+.hover-glow:hover {
+    box-shadow: 0 0 30px rgba(25, 118, 210, 0.3);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.skill-tag {
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    transform: scale(1.05);
+}
+
+.project-card {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(25, 118, 210, 0.2);
+}
+
+.theme-toggle {
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(180deg);
+}
+
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2563eb;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.admin-login-btn {
+    transition: all 0.3s ease;
+}
+
+.admin-login-btn:hover {
+    transform: scale(1.05);
+}
+
+.star-btn {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.star-btn:hover {
+    transform: scale(1.2);
+}
+
+.star-btn i {
+    transition: all 0.3s ease;
+}
+
+.star-btn:hover i {
+    text-shadow: 0 0 20px rgba(234, 179, 8, 0.4);
+}
+
+.modal-star-btn {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: #4b5563;
+}
+
+.modal-star-btn i {
+    transition: all 0.3s ease;
+}
+
+.modal-star-btn:hover i {
+    text-shadow: 0 0 30px rgba(234, 179, 8, 0.3);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+/* ============================================================ */
+/* ===== FOOTER ANIMATIONS ===== */
+/* ============================================================ */
+footer .group:hover i {
+    animation: float 2s ease-in-out infinite;
+}
+
+footer a {
+    position: relative;
+}
+
+footer a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    transition: width 0.3s ease;
+}
+
+footer a:hover::after {
+    width: 100%;
+}
+
+/* ============================================================ */
+/* ===== SCROLL REVEAL ANIMATIONS ===== */
+/* ============================================================ */
+.scroll-reveal {
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scroll-reveal.fade-up {
+    transform: translateY(60px) scale(0.96);
+}
+
+.scroll-reveal.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.scroll-reveal.slide-left {
+    transform: translateX(-80px);
+}
+
+.scroll-reveal.slide-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-reveal.slide-right {
+    transform: translateX(80px);
+}
+
+.scroll-reveal.slide-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-reveal.zoom-in {
+    transform: scale(0.85);
+    filter: blur(3px);
+}
+
+.scroll-reveal.zoom-in.visible {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+}
+
+.scroll-reveal.glow-reveal {
+    transform: scale(0.95);
+    filter: blur(8px);
+    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scroll-reveal.glow-reveal.visible {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+}
+
+.scroll-reveal.flip-in {
+    transform: perspective(600px) rotateY(25deg) scale(0.9);
+    transform-origin: center;
+}
+
+.scroll-reveal.flip-in.visible {
+    opacity: 1;
+    transform: perspective(600px) rotateY(0deg) scale(1);
+}
+
+.scroll-reveal.bounce-up {
+    transform: translateY(80px);
+    transition: all 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.scroll-reveal.bounce-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-reveal .stagger-child {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scroll-reveal.visible .stagger-child:nth-child(1) {
+    transition-delay: 0.05s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-reveal.visible .stagger-child:nth-child(2) {
+    transition-delay: 0.10s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-reveal.visible .stagger-child:nth-child(3) {
+    transition-delay: 0.15s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-reveal.visible .stagger-child:nth-child(4) {
+    transition-delay: 0.20s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-reveal.visible .stagger-child:nth-child(5) {
+    transition-delay: 0.25s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-reveal.visible .stagger-child:nth-child(6) {
+    transition-delay: 0.30s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-reveal.visible .stagger-child:nth-child(7) {
+    transition-delay: 0.35s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-reveal.visible .stagger-child:nth-child(8) {
+    transition-delay: 0.40s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================================ */
+/* ===== FEEDBACK MODAL ===== */
+/* ============================================================ */
+#feedbackModal .glass-effect {
+    background: rgba(0, 0, 0, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+#feedbackModal .text-primary {
+    color: #ffffff !important;
+}
+
+#feedbackModal .text-secondary {
+    color: #94a3b8 !important;
+}
+
+#feedbackModal input,
+#feedbackModal textarea {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+}
+
+#feedbackModal input:hover,
+#feedbackModal textarea:hover {
+    border-color: rgba(59, 130, 246, 0.4) !important;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.05) !important;
+}
+
+#feedbackModal input:focus,
+#feedbackModal textarea:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.05) !important;
+}
+
+#feedbackModal {
+    transition: all 0.3s ease;
+}
+
+#feedbackModal .absolute {
+    transition: all 0.3s ease;
+}
+
+
+
+
+/* Custom Animations for  about section */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+.animate-float-delay {
+    animation: float 4s ease-in-out infinite 1s;
+}
+.animate-float-slow {
+    animation: float 5s ease-in-out infinite 0.5s;
+}
+.animate-float-slow-delay {
+    animation: float 5s ease-in-out infinite 1.5s;
+}
+
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+}
+
+/* Image Container - Perfect Circle */
+.rounded-full {
+    border-radius: 50% !important;
+}
