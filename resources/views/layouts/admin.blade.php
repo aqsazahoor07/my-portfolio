@@ -341,15 +341,15 @@
         <main class="main-content flex-1 ml-64 min-h-screen">
             @yield('content')
             <!-- ===== BACK BUTTON (Show on all pages except dashboard) ===== -->
-    @if(!request()->routeIs('admin.dashboard'))
-        <div class="px-4 sm:px-6 lg:px-8 pt-4">
-            <a href="{{ url()->previous() }}" 
-               class="group inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/5 border border-white/10 hover:border-blue-400/40 text-white/60 hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_30px_rgba(59,130,246,0.1)] mb-4">
-                <i class="fas fa-arrow-left text-sm group-hover:-translate-x-1 transition-transform duration-300"></i>
-                <span class="text-sm font-medium">Go Back</span>
-            </a>
-        </div>
-    @endif
+            @if(!request()->routeIs('admin.dashboard'))
+                <div class="px-4 sm:px-6 lg:px-8 pt-4">
+                    <a href="{{ url()->previous() }}" 
+                       class="group inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/5 border border-white/10 hover:border-blue-400/40 text-white/60 hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_30px_rgba(59,130,246,0.1)] mb-4">
+                        <i class="fas fa-arrow-left text-sm group-hover:-translate-x-1 transition-transform duration-300"></i>
+                        <span class="text-sm font-medium">Go Back</span>
+                    </a>
+                </div>
+            @endif
         </main>
     </div>
 </body>
