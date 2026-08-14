@@ -159,3 +159,14 @@ Route::get('/privacy-policy', [PageController::class, 'privacyPolicy'])->name('p
 Route::get('/terms-of-service', [PageController::class, 'termsOfService'])->name('terms.service');
 Route::get('/sitemap', [PageController::class, 'sitemap'])->name('sitemap');
 Route::get('/documentation', [PageController::class, 'documentation'])->name('documentation');
+
+
+
+
+
+
+
+
+Route::get('/debug-test', function() {
+    return view('test-debug');
+});
